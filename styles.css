@@ -1,0 +1,101 @@
+/* 基本スタイル */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* ヘッダー */
+header {
+    background: blue; /* 背景色を青に変更 */
+    color: white;
+    padding: 10px 0;
+    /* ヘッダーの下からのフェードインアニメーション */
+    animation: fadeInDown 1s ease;
+}
+
+/* アニメーションの定義 */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 自己紹介セクション */
+.profile {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    /* セクションのスライドインアニメーション */
+    animation: slideIn 1s ease;
+}
+
+/* 画像サイズを固定 */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; /* 画像比率を維持しつつ指定サイズに収める */
+}
+
+/* オセロリンクセクション */
+.game-link {
+    margin-top: 20px;
+    padding: 10px;
+    background: white;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* リンク部分のポップアップアニメーション */
+    animation: popIn 1s ease;
+}
+
+/* キャンバスなど共通のスタイル */
+.game-container {
+    margin: 20px auto;
+}
+
+canvas {
+    background: green;
+    display: block;
+    margin: auto;
+}
+
+/* アニメーション定義 */
+
+/* セクションのスライドインアニメーション */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* リンクのポップアップアニメーション */
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
